@@ -1,17 +1,24 @@
+/**
+ * Rule-based compliance model
+ * Acts as the "MODEL" for MVP
+ */
+
 function evaluateCompliance(caseItem) {
-  let issues = [];
+  const violations = [];
 
   if (caseItem.follow_up_count > 3) {
-    issues.push("Too many follow-ups");
+    violations.push("Exceeded maximum follow-up limit");
   }
+
   if (caseItem.last_contact_hour > 18) {
-    issues.push("After-hours contact");
+    violations.push("Contacted customer outside allowed hours");
   }
 
   return {
-    compliant: issues.length === 0,
-    issues
+    compliant: violations.length === 0,
+    violations: violations
   };
 }
 
 module.exports = evaluateCompliance;
+
