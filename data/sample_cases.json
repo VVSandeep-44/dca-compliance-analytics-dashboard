@@ -4,17 +4,23 @@
     "agent": "Agent A",
     "amount": 50000,
     "status": "In Progress",
-    "last_contact": "2026-01-02 14:30",
     "follow_up_count": 2,
-    "compliance_flag": false
+    "last_contact_hour": 15
   },
   {
     "case_id": "C002",
     "agent": "Agent B",
-    "amount": 75000,
+    "amount": 72000,
     "status": "Pending",
-    "last_contact": "2026-01-01 10:15",
     "follow_up_count": 4,
-    "compliance_flag": true
+    "last_contact_hour": 19
+  },
+  {
+    "case_id": "C003",
+    "agent": "Agent C",
+    "amount": 30000,
+    "status": "Resolved",
+    "follow_up_count": 1,
+    "last_contact_hour": 11
   }
 ]
