@@ -114,4 +114,4 @@ The UI is intentionally minimal and focuses on clarity.
 ## 🏁 Conclusion
 This project demonstrates a **compliance-centric MVP** for debt collection workflows.  
 The focus is on **architecture, clarity, and regulatory alignment**, making it suitable for hackathon evaluation and future extension.
-
+ 
