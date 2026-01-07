@@ -1,0 +1,20 @@
+[
+  {
+    "case_id": "C001",
+    "agent": "Agent A",
+    "amount": 50000,
+    "status": "In Progress",
+    "last_contact": "2026-01-02 14:30",
+    "follow_up_count": 2,
+    "compliance_flag": false
+  },
+  {
+    "case_id": "C002",
+    "agent": "Agent B",
+    "amount": 75000,
+    "status": "Pending",
+    "last_contact": "2026-01-01 10:15",
+    "follow_up_count": 4,
+    "compliance_flag": true
+  }
+]
