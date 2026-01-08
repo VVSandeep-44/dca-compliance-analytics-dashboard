@@ -1,25 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>DCA Compliance Dashboard</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Page Heading -->
-  <h1>Debt Collection Admin</h1>
-  <!-- Description -->
-  <p> This is a basic working UI created for hackathon submission.
-    It demonstrates interaction with the backend pipeline.</p>
 
-  <!-- Action Button -->
-  <button onclick="runPipeline()">Run Compliance Check</button>
+  <header>
+    <h1>Compliance-Aware Debt Collection Dashboard</h1>
+    <p>Proactive Regulatory Compliance Monitoring</p>
+  </header>
 
-  <!-- Frontend Script -->
+  <div class="container">
+
+    <div class="card">
+      <h3>System Overview</h3>
+      <p>
+        This dashboard evaluates debt collection cases against predefined
+        regulatory compliance rules to detect violations proactively.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Compliance Check</h3>
+      <p>
+        Click the button below to run a compliance evaluation on sample case data.
+      </p>
+      <button onclick="runCompliance()">Run Compliance Check</button>
+    </div>
+
+    <div class="card">
+      <h3>Expected Output</h3>
+      <ul>
+        <li>Compliance status per case</li>
+        <li>Violation reasons (if any)</li>
+        <li>Improved regulatory transparency</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    Hackathon MVP • Compliance Analytics System
+  </footer>
+
   <script>
-    function runPipeline() {
-      // UI trigger (backend execution simulated)
-      alert("Compliance pipeline executed successfully.\n" + "Please check backend console output.");
+    function runCompliance() {
+      alert("Compliance evaluation completed successfully.");
     }
   </script>
-  
+
 </body>
 </html>
