@@ -1,10 +1,28 @@
 # Compliance-Aware Debt Collection Workflow & Analytics Dashboard
+Proactive regulatory compliance enforcement system
+
 
 ## 📌 Project Overview
 This project is a **Compliance-Aware Debt Collection Workflow & Analytics Dashboard** developed as a **hackathon MVP**.  
 It focuses on enforcing regulatory compliance in debt collection activities while providing basic analytics and transparency through a modular system design.
 
 The solution demonstrates how **rule-based compliance logic**, a **data processing pipeline**, and a **basic working UI** can be integrated into a scalable architecture.
+
+---
+
+
+## Why this project?
+
+Debt collection is a legally sensitive domain where even small regulatory violations
+can result in legal penalties, financial loss, and reputational damage.
+Most existing systems focus on reporting violations after they occur.
+
+This project explores a proactive, compliance-first approach where regulatory rules
+are enforced directly within the operational workflow, helping organizations
+identify and prevent violations early.
+
+The system is designed with explainability and scalability in mind, making it suitable
+for future AI-driven compliance risk prediction.
 
 ---
 
@@ -27,6 +45,24 @@ A centralized digital platform that:
 - Provides a basic UI for interaction and demonstration
 
 ---
+
+
+## How the system works
+
+Input Case Data  
+→ Compliance Rule Engine  
+→ Evaluation Pipeline  
+→ Compliance Results  
+→ User Interface
+
+1. Case data is processed through predefined regulatory compliance rules.
+2. Each case is evaluated for potential violations.
+3. Results include compliance status and violation reasons.
+4. A lightweight UI demonstrates user interaction and system flow.
+
+
+---
+
 
 ## 🧱 System Architecture
 The system follows a **modular architecture**, separating responsibilities across components:
