@@ -1,0 +1,19 @@
+[
+  {
+    "case_id": "C001",
+    "agent": "Agent A",
+    "status": "In Progress",
+    "compliant": true,
+    "violations": []
+  },
+  {
+    "case_id": "C002",
+    "agent": "Agent B",
+    "status": "Pending",
+    "compliant": false,
+    "violations": [
+      "Exceeded maximum follow-up limit",
+      "Contacted customer outside permitted hours"
+    ]
+  }
+]
