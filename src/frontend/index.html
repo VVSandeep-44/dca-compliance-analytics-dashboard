@@ -31,6 +31,8 @@
         Click the button below to run a compliance evaluation on sample case data.
       </p>
       <button onclick="runCompliance()">Run Compliance Check</button>
+<p id="loading" style="display:none;">Evaluating compliance rules...</p>
+
     </div>
 <div class="card" id="results" style="display:none;">
   <h3>Compliance Results</h3>
@@ -53,6 +55,15 @@
 
   <script>
   function runCompliance() {
+    document.getElementById("loading").style.display = "block";
+
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+      showResults();
+    }, 1200);
+  }
+
+  function showResults() {
     const results = [
       {
         case_id: "C001",
@@ -73,7 +84,6 @@
 
     const resultsDiv = document.getElementById("results");
     const content = document.getElementById("results-content");
-
     content.innerHTML = "";
 
     results.forEach(r => {
@@ -101,6 +111,7 @@
     resultsDiv.style.display = "block";
   }
 </script>
+
 
 
 
