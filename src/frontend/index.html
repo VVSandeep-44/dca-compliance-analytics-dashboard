@@ -34,18 +34,16 @@
 <p id="loading" style="display:none;">Evaluating compliance rules...</p>
 
     </div>
+
 <div class="card" id="results" style="display:none;">
   <h3>Compliance Results</h3>
+  <label>
+  <input type="checkbox" id="filterToggle" onchange="showResults()">
+  Show only non-compliant cases
+</label>
   <div id="results-content"></div>
 </div>
-    <div class="card">
-      <h3>Expected Output</h3>
-      <ul>
-        <li>Compliance status per case</li>
-        <li>Violation reasons (if any)</li>
-        <li>Improved regulatory transparency</li>
-      </ul>
-    </div>
+    
 
   </div>
 
@@ -86,7 +84,11 @@
     const content = document.getElementById("results-content");
     content.innerHTML = "";
 
-    results.forEach(r => {
+    const filterOn = document.getElementById("filterToggle")?.checked;
+
+results.forEach(r => {
+  if (filterOn && r.compliant) return;
+
       const badgeClass = r.compliant ? "green" : "red";
       const badgeText = r.compliant ? "Compliant" : "Non-Compliant";
 
