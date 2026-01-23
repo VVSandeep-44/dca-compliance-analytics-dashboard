@@ -7,6 +7,8 @@ function runCompliance() {
   }, 1200);
 }
 
+const evaluationTime = new Date().toLocaleString();
+
 function showResults() {
   const results = [
     {
@@ -39,7 +41,8 @@ function showResults() {
   content.innerHTML = "";
 
   const filterOn = document.getElementById("filterToggle")?.checked;
-
+  
+content.innerHTML = `<p><em>Last evaluated: ${evaluationTime}</em></p>`;
   results.forEach((r) => {
     if (filterOn && r.compliant) return;
 
