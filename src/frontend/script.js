@@ -1,3 +1,4 @@
+let auditLog = [];
 function runCompliance() {
   document.getElementById("loading").style.display = "block";
 
@@ -61,4 +62,34 @@ function renderResults(results) {
   });
 
   resultsDiv.style.display = "block";
+
+  const violationCount = results.reduce(
+  (count, r) => count + r.violations.length,
+  0
+);
+
+auditLog.push({
+  timestamp: new Date().toLocaleString(),
+  totalCases: results.length,
+  totalViolations: violationCount
+});
+
+renderAuditLog();
+
 }
+
+function renderAuditLog() {
+  const logElement = document.getElementById("audit-log");
+  logElement.innerHTML = "";
+
+  auditLog.forEach(entry => {
+    logElement.innerHTML += `
+      <li>
+        ${entry.timestamp} — 
+        Cases: ${entry.totalCases}, 
+        Violations: ${entry.totalViolations}
+      </li>
+    `;
+  });
+}
+

@@ -76,3 +76,11 @@ footer {
   margin-left: 20px;
   color: #b71c1c;
 }
+#audit-log {
+  font-size: 14px;
+  color: #444;
+}
+
+#audit-log li {
+  margin-bottom: 6px;
+}
