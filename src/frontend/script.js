@@ -10,39 +10,21 @@ function runCompliance() {
 const evaluationTime = new Date().toLocaleString();
 
 function showResults() {
-  const results = [
-    {
-      case_id: "C001",
-      agent: "Agent A",
-      compliant: true,
-      violations: [],
-    },
-    {
-      case_id: "C002",
-      agent: "Agent B",
-      compliant: false,
-      violations: [
-        {
-          rule: "Exceeded maximum follow-up limit",
-          severity: "High",
-          impact: "Customer harassment risk",
-        },
-        {
-          rule: "Contacted customer outside permitted hours",
-          severity: "Medium",
-          impact: "Regulatory time-window violation",
-        },
-      ],
-    },
-  ];
+  fetch("../data/cases.json")
+    .then(res => res.json())
+    .then(results => {
+      renderResults(results);
+    });
+}
 
+function renderResults(results) {
   const resultsDiv = document.getElementById("results");
   const content = document.getElementById("results-content");
   content.innerHTML = "";
 
   const filterOn = document.getElementById("filterToggle")?.checked;
-  
-content.innerHTML = `<p><em>Last evaluated: ${evaluationTime}</em></p>`;
+
+  content.innerHTML = `<p><em>Last evaluated: ${evaluationTime}</em></p>`;
   results.forEach((r) => {
     if (filterOn && r.compliant) return;
 

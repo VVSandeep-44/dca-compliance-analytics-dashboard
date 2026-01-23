@@ -1,0 +1,45 @@
+[
+  {
+    "case_id": "C001",
+    "agent": "Agent A",
+    "compliant": true,
+    "violations": []
+  },
+  {
+    "case_id": "C002",
+    "agent": "Agent B",
+    "compliant": false,
+    "violations": [
+      {
+        "rule": "Exceeded maximum follow-up limit",
+        "severity": "High",
+        "impact": "Customer harassment risk"
+      },
+      {
+        "rule": "Contacted customer outside permitted hours",
+        "severity": "Medium",
+        "impact": "Regulatory time-window violation"
+      }
+    ]
+  },
+
+    {
+        "case_id": "C003",
+        "agent": "Agent C",
+        "compliant": false,
+        "violations": [
+        {
+            "rule": "Failed to provide required disclosures",
+            "severity": "High",
+            "impact": "Legal non-compliance"
+        }
+        ]
+    },
+    {
+        "case_id": "C004",
+        "agent": "Agent D",
+        "compliant": true,
+        "violations": []
+    }
+
+    ]
