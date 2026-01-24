@@ -3,7 +3,7 @@ Proactive regulatory compliance enforcement system
 
 
 ## 📌 Project Overview
-This project is a **Compliance-Aware Debt Collection Workflow & Analytics Dashboard** developed as a **hackathon MVP**.  
+This project is a **Compliance-Aware Debt Collection Workflow & Analytics Dashboard**.  
 It focuses on enforcing regulatory compliance in debt collection activities while providing basic analytics and transparency through a modular system design.
 
 The solution demonstrates how **rule-based compliance logic**, a **data processing pipeline**, and a **basic working UI** can be integrated into a scalable architecture.
